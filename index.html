@@ -8,10 +8,23 @@
 </head>
 <body>
 
-    <head>
+    <script>
+
+        function contarPalabra(){
+
+            textoArea = document.getElementById("text").value;
+            textoAreaDividido = textoArea.split(" ");
+            numeroPalabras = textoAreaDividido.length;
+
+            document.write(numeroPalabras);
+        }
+        
+    </script>
+
+    <header>
         <h1>Parcial Practica Profezionalizante</h1>
         <h2>IES 9-008 Manuel Belgrano - Sede Godoy Cruz</h2>
-    </head>
+    </header>
 
     <nav>
         <a href="#">Sobre mi</a>
@@ -57,10 +70,11 @@
                      
                      <div>   
                         <label>Ingrese Texto</label>
-                        <textarea></textarea>
+                        <textarea cols="80" rows="20" id="text"></textarea>
                     </div>
                     <div>
-                        <input type = "submit" value = "Contar Palabras">
+                        <input type = "submit" value = "Contar Palabras" onclick="contarPalabra()">
+
                     </div>
              </form>
            
